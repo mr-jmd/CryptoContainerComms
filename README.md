@@ -37,7 +37,9 @@ Fuente: OpenSSL RAND_bytes()
 * Comunicación Segura: Sockets TCP con validación completa
 
 * Estructura de Transacción
-json{
+  
+```json
+{
   "transaction_id": "550e8400-e29b-41d4-a716-446655440000",
   "timestamp": "1704067200",
   "from_account": "1234567890",
@@ -46,7 +48,9 @@ json{
   "description": "Transferencia segura",
   "dynamic_token": "1704067200:a1b2c3d4e5f6..."
 }
-🚀 Instalación y Despliegue
+```
+
+* Instalación y Despliegue
 Prerrequisitos
 
 Docker 20.10+
