@@ -59,8 +59,6 @@ Git
 
 Opción 1: Construcción Local
 bash# Clonar el repositorio
-git clone <url-del-repositorio>
-cd sistema-transacciones-seguras
 
 # Detener contenedores actuales
 docker-compose down
