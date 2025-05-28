@@ -1,6 +1,6 @@
 Sistema de Transacciones Seguras con Clave Dinámica
 Un sistema de comunicación segura entre contenedores Docker que implementa un mecanismo de autenticación similar al sistema de clave dinámica de Bancolombia, utilizando algoritmos criptográficos avanzados.
-* Arquitectura del Sistema
+🏗️ Arquitectura del Sistema
 ┌─────────────────────┐         ┌─────────────────────┐
 │     CLIENTE         │◄───────►│     SERVIDOR        │
 │   (Container 1)     │   TCP   │   (Container 2)     │
@@ -10,7 +10,7 @@ Un sistema de comunicación segura entre contenedores Docker que implementa un m
 │ • Calcula HMAC      │         │ • Procesa transacc. │
 │ • Socket cliente    │         │ • Socket servidor   │
 └─────────────────────┘         └─────────────────────┘
-* Algoritmos Criptográficos Implementados
+🔐 Algoritmos Criptográficos Implementados
 1. HMAC-SHA256
 
 Uso: Generación de tokens dinámicos y verificación de integridad
@@ -33,16 +33,16 @@ Implementación: A través de OpenSSL
 Uso: IVs para AES, UUIDs para transacciones
 Fuente: OpenSSL RAND_bytes()
 
-* Medidas de Seguridad
+🛡️ Medidas de Seguridad
 
-* Tokens con Tiempo Limitado: Ventana de validez de 30 segundos
-* Protección contra Replay Attacks: Control de transacciones duplicadas
-* Cifrado Extremo a Extremo: AES-256-CBC para todos los datos
-* Verificación de Integridad: HMAC-SHA256 de datos cifrados
-* Identificadores Únicos: UUIDs v4 para cada transacción
-* Comunicación Segura: Sockets TCP con validación completa
+⏱️ Tokens con Tiempo Limitado: Ventana de validez de 30 segundos
+🔄 Protección contra Replay Attacks: Control de transacciones duplicadas
+🔒 Cifrado Extremo a Extremo: AES-256-CBC para todos los datos
+✅ Verificación de Integridad: HMAC-SHA256 de datos cifrados
+🆔 Identificadores Únicos: UUIDs v4 para cada transacción
+🌐 Comunicación Segura: Sockets TCP con validación completa
 
-* Estructura de Transacción
+📋 Estructura de Transacción
 json{
   "transaction_id": "550e8400-e29b-41d4-a716-446655440000",
   "timestamp": "1704067200",
@@ -52,7 +52,7 @@ json{
   "description": "Transferencia segura",
   "dynamic_token": "1704067200:a1b2c3d4e5f6..."
 }
-* Instalación y Despliegue
+🚀 Instalación y Despliegue
 Prerrequisitos
 
 Docker 20.10+
@@ -61,8 +61,10 @@ Git
 
 Opción 1: Construcción Local
 bash# Clonar el repositorio
+git clone <url-del-repositorio>
+cd sistema-transacciones-seguras
 
-# Detener contenedores actuales:
+# Detener contenedores actuales
 docker-compose down
 
 # Construir las imágenes
