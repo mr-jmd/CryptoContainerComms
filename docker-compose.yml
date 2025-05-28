@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: transaction-server
+    ports:
+      - "8080:8080"
+    networks:
+      - transaction-network
+    environment:
+      - PORT=8080
+    restart: unless-stopped
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: transaction-client
+    depends_on:
+      - server
+    networks:
+      - transaction-network
+    # Esperar a que el servidor esté listo antes de ejecutar el cliente
+    command: sh -c "sleep 15 && ./client"
+    restart: "no"
+
+networks:
+  transaction-network:
+    driver: bridge
