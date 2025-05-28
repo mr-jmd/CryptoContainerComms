@@ -1,7 +1,6 @@
 Sistema de Transacciones Seguras con Clave Dinámica
 Un sistema de comunicación segura entre contenedores Docker que implementa un mecanismo de autenticación similar al sistema de clave dinámica de Bancolombia, utilizando algoritmos criptográficos avanzados.
 * Arquitectura del Sistema
-* 
 ![image](https://github.com/user-attachments/assets/913a75a1-8f9a-4df3-9f88-8b775a6aa47b)
 
 * Algoritmos Criptográficos Implementados
